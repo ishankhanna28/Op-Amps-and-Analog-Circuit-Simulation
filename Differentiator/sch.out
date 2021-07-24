@@ -1,0 +1,316 @@
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Thu Mar 18 00:09:22 2021
+
+
+
+** Analysis setup **
+.tran 0ns 100
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "sch.net"
+
+
+
+**** INCLUDING sch.net ****
+* Schematics Netlist *
+
+
+
+V_V1         +Vcc 0 15V
+V_V2         0 -Vcc 15V
+X_U1A         0 $N_0001 +Vcc -Vcc Vout LM324
+C_C1         $N_0002 $N_0001  100u  
+R_R2         $N_0001 Vout  100k  
+V_Vin         $N_0002 0  
++PULSE 0 1 0 5 10 15 40
+
+**** RESUMING sch.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        
+               PNP             
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +Vcc)   15.0000  ( -Vcc)  -15.0000  ( Vout)    -.0047  ($N_0001)-192.5E-06    
+
+($N_0002)    0.0000                   (X_U1A.6) 883.9E-09                       
+
+(X_U1A.7)    -.0047                   (X_U1A.8)    -.0047                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   15.0000                       
+
+(X_U1A.b)-1.764E-06                   (X_U1A.10)     .6076                      
+
+(X_U1A.11)  -14.9600                  (X_U1A.12)  -14.9600                      
+
+(X_U1A.13)     .5937                  (X_U1A.14)     .5937                      
+
+(X_U1A.53)   13.5000                  (X_U1A.54)  -14.1780                      
+
+(X_U1A.90)-44.95E-06                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.320E-03
+    V_V2        -3.320E-03
+    V_Vin        0.000E+00
+    X_U1A.vb     8.839E-12
+    X_U1A.vc     1.351E-11
+    X_U1A.ve     1.455E-11
+    X_U1A.vlim  -4.495E-08
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.96E-02  WATTS
+
+
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.ga    X_U1A.gcm 
+I-SOURCE     3.621E-08   3.622E-08
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.egnd
+V-SOURCE     0.000E+00
+I-SOURCE     9.000E-08
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.fb    X_U1A.fpos  X_U1A.fneg
+I-SOURCE     1.920E-04  -4.495E-08   4.495E-08
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.hlim
+V-SOURCE    -4.495E-05
+I-SOURCE     8.991E-17
+
+
+**** DIODES
+
+
+NAME         X_U1A.dc    X_U1A.de    X_U1A.dlp   X_U1A.dln   X_U1A.dp  
+MODEL        X_U1A.dy    X_U1A.dy    X_U1A.dx    X_U1A.dx    X_U1A.dx  
+ID          -1.35E-11   -1.42E-11   -4.00E-11   -4.00E-11   -3.00E-11 
+VD          -1.35E+01   -1.42E+01   -4.00E+01   -4.00E+01   -3.00E+01 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          2.63E-12    2.57E-12    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1A.q1    X_U1A.q2  
+MODEL        X_U1A.qx    X_U1A.qx  
+IB          -4.49E-08   -4.47E-08 
+IC          -7.50E-06   -7.46E-06 
+VBE         -5.94E-01   -5.94E-01 
+VBC          1.50E+01    1.50E+01 
+VCE         -1.56E+01   -1.56E+01 
+BETADC       1.67E+02    1.67E+02 
+GM           2.90E-04    2.88E-04 
+RPI          5.75E+05    5.78E+05 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.67E+02    1.67E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       4.61E+15    4.59E+15 
+
+
+
+
+**** CURRENT CONTROLLED SWITCHES
+
+
+NAME         X_U1A.w2    X_U1A.w1    X_U1A.w3    X_U1A.w4  
+MODEL        X_U1A.sw2   X_U1A.sw1   X_U1A.sw3   X_U1A.sw4 
+I LOAD       1.60E-06    1.65E-06   -1.65E-06   -1.60E-06 
+V LOAD       1.76E-06    1.50E+01   -1.50E+01   -1.76E-06 
+R LOAD       1.10E+00    9.10E+06    9.10E+06    1.10E+00 
+I CTRL      -4.49E-08   -4.49E-08   -4.49E-08   -4.49E-08 
+**** 03/18/21 11:07:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Differentiator\sch.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +Vcc)   15.0000  ( -Vcc)  -15.0000  ( Vout)    -.0047  ($N_0001)-192.5E-06    
+
+($N_0002)    0.0000                   (X_U1A.6) 883.9E-09                       
+
+(X_U1A.7)    -.0047                   (X_U1A.8)    -.0047                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   15.0000                       
+
+(X_U1A.b)-1.764E-06                   (X_U1A.10)     .6076                      
+
+(X_U1A.11)  -14.9600                  (X_U1A.12)  -14.9600                      
+
+(X_U1A.13)     .5937                  (X_U1A.14)     .5937                      
+
+(X_U1A.53)   13.5000                  (X_U1A.54)  -14.1780                      
+
+(X_U1A.90)-44.95E-06                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.320E-03
+    V_V2        -3.320E-03
+    V_Vin        0.000E+00
+    X_U1A.vb     8.839E-12
+    X_U1A.vc     1.351E-11
+    X_U1A.ve     1.455E-11
+    X_U1A.vlim  -4.495E-08
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.96E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .14
+

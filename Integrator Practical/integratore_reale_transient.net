@@ -1,0 +1,17 @@
+* Schematics Netlist *
+
+
+
+V_V1         0 -Vcc 15V
+V_V2         +Vcc 0 15V
+R_R1         $N_0002 $N_0001  10k  
+C_Cf         $N_0001 **OUT**  0.0022u  
+R_Rf         $N_0001 **OUT**  33k  
+X_U2         0 $N_0001 +Vcc -Vcc **OUT** LF411
+V_Vquadra50kHz         $N_0005 0  
++PULSE 1 -1 0 0.01u 0.01u 10u 20u
+R_R3         $N_0005 $N_0006  1k  
+V_Vquadra100Hz         $N_0006 0  
++PULSE 1 -1 0 1u 1u 5m 10m
+V_Vquadra         $N_0002 0  
++PULSE 1 -1 0 1u 1u 5m 10m

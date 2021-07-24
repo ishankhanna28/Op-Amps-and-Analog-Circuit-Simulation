@@ -1,0 +1,9 @@
+* Schematics Netlist *
+
+
+
+E_U1         Vout 0 VALUE {LIMIT(V($N_0001,$N_0002)*1E6,-15V,+15V)}
+R_Rf         Vout $N_0002  1k  
+R_R1         $N_0002 0  1k  
+V_Vin         $N_0001 0 DC 0v AC 0v
++SIN 0v 3v 1khz 0 0 0

@@ -1,0 +1,22 @@
+* C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+* Schematics Version 9.2
+* Thu Mar 18 01:10:47 2021
+
+
+
+** Analysis setup **
+.ac LIN 101 159m 10000K
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "integratore_ideale_FdT.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

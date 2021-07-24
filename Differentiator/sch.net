@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+V_V1         +Vcc 0 15V
+V_V2         0 -Vcc 15V
+X_U1A         0 $N_0001 +Vcc -Vcc Vout LM324
+C_C1         $N_0002 $N_0001  100u  
+R_R2         $N_0001 Vout  100k  
+V_Vin         $N_0002 0  
++PULSE 0 1 0 5 10 15 40

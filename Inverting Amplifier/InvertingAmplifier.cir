@@ -1,0 +1,22 @@
+* C:\Users\Ishan's PC\Desktop\Projects\EDC\InvertingAmplifier.sch
+
+* Schematics Version 9.2
+* Fri Dec 04 21:42:30 2020
+
+
+
+** Analysis setup **
+.tran 0ns 5us
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "InvertingAmplifier.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

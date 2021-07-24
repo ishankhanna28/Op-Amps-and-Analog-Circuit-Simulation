@@ -1,0 +1,130 @@
+
+**** 03/11/21 02:30:30 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Thu Mar 11 02:28:18 2021
+
+
+
+** Analysis setup **
+.tran 0ns 5ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+E_U1         Vout 0 VALUE {LIMIT(V($N_0001,$N_0002)*1E6,-15V,+15V)}
+R_Rf         Vout $N_0002  1k  
+R_R1         $N_0002 0  1k  
+V_Vin         $N_0001 0 DC 0v AC 0v
++SIN 0v 3v 1khz 0 0 0
+
+**** RESUMING Schematic1.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 03/11/21 02:30:30 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vout)    0.0000  ($N_0001)    0.0000                   ($N_0002)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 03/11/21 02:30:30 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE     0.000E+00
+I-SOURCE     0.000E+00
+**** 03/11/21 02:30:30 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vout)    0.0000  ($N_0001)    0.0000                   ($N_0002)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

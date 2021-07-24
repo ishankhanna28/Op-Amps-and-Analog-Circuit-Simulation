@@ -1,0 +1,10 @@
+* Schematics Netlist *
+
+
+
+V_V1         0 -Vcc 15V
+V_V2         +Vcc 0 15V
+R_R1         $N_0002 $N_0001  10k  
+C_Cf         $N_0001 **OUT**  0.0022u  
+V_Vin         $N_0002 0 DC 0V AC 1V 
+X_U6         0 $N_0001 +Vcc -Vcc **OUT** LF411

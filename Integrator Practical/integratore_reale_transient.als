@@ -1,0 +1,15 @@
+.ALIASES
+V_V1            V1(+=0 -=-Vcc )
+V_V2            V2(+=+Vcc -=0 )
+R_R1            R1(1=$N_0002 2=$N_0001 )
+C_Cf            Cf(1=$N_0001 2=**OUT** )
+R_Rf            Rf(1=$N_0001 2=**OUT** )
+X_U2            U2(+=0 -=$N_0001 V+=+Vcc V-=-Vcc OUT=**OUT** )
+V_Vquadra50kHz          Vquadra50kHz(+=$N_0005 -=0 )
+R_R3            R3(1=$N_0005 2=$N_0006 )
+V_Vquadra100Hz          Vquadra100Hz(+=$N_0006 -=0 )
+V_Vquadra          Vquadra(+=$N_0002 -=0 )
+_    _(**OUT**=**OUT**)
+_    _(+Vcc=+Vcc)
+_    _(-Vcc=-Vcc)
+.ENDALIASES

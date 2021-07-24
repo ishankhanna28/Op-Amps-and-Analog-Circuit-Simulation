@@ -1,0 +1,211 @@
+
+**** 03/18/21 01:10:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Thu Mar 18 01:10:47 2021
+
+
+
+** Analysis setup **
+.ac LIN 101 159m 10000K
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "integratore_ideale_FdT.net"
+
+
+
+**** INCLUDING integratore_ideale_FdT.net ****
+* Schematics Netlist *
+
+
+
+V_V1         0 -Vcc 15V
+V_V2         +Vcc 0 15V
+R_R1         $N_0002 $N_0001  10k  
+C_Cf         $N_0001 **OUT**  0.0022u  
+V_Vin         $N_0002 0 DC 0V AC 1V 
+X_U6         0 $N_0001 +Vcc -Vcc **OUT** LF411
+
+**** RESUMING integratore_ideale_FdT.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 03/18/21 01:10:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U6.dx         X_U6.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/18/21 01:10:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U6.jx         
+               NJF             
+         VTO   -1            
+        BETA  743.300000E-06 
+          IS   12.500000E-12 
+
+
+**** 03/18/21 01:10:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +Vcc)   15.0000  ( -Vcc)  -15.0000  (X_U6.6) 186.6E-06 (X_U6.7)   -1.4848     
+
+(X_U6.8)   -1.4848 (X_U6.9)    0.0000 ($N_0001) 403.2E-09                       
+
+($N_0002)    0.0000                   (**OUT**)   -1.4848                       
+
+(X_U6.10)     .6613                   (X_U6.11)   14.6610                       
+
+(X_U6.12)   14.6610                   (X_U6.53)   13.5000                       
+
+(X_U6.54)  -13.5000                   (X_U6.90)-3.344E-09                       
+
+(X_U6.91)   25.0000                   (X_U6.92)  -25.0000                       
+
+(X_U6.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.170E-03
+    V_V2        -2.171E-03
+    V_Vin        4.032E-11
+    X_U6.vb      1.866E-09
+    X_U6.vc      1.499E-11
+    X_U6.ve      1.125E-11
+    X_U6.vlim   -3.344E-12
+    X_U6.vlp    -2.500E-11
+    X_U6.vln    -2.547E-11
+
+    TOTAL POWER DISSIPATION   6.51E-02  WATTS
+
+
+**** 03/18/21 01:10:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Ishan's PC\Desktop\Sem 4\Lab\LIC\Integerator\integratore_ideale_FdT.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U6.ga     X_U6.gcm  
+I-SOURCE    -2.031E-10   1.662E-09
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U6.egnd 
+V-SOURCE     0.000E+00
+I-SOURCE     5.623E-07
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U6.fb   
+I-SOURCE     5.939E-02
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U6.hlim 
+V-SOURCE    -3.344E-09
+I-SOURCE     6.353E-21
+
+
+**** DIODES
+
+
+NAME         X_U6.dc     X_U6.de     X_U6.dlp    X_U6.dln    X_U6.dp   
+MODEL        X_U6.dy     X_U6.dy     X_U6.dx     X_U6.dx     X_U6.dx   
+ID          -1.50E-11   -1.20E-11   -2.50E-11   -2.50E-11   -3.00E-11 
+VD          -1.50E+01   -1.20E+01   -2.50E+01   -2.50E+01   -3.00E+01 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          2.50E-12    2.77E-12    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** JFETS
+
+
+NAME         X_U6.j1     X_U6.j2   
+MODEL        X_U6.jx     X_U6.jx   
+ID           8.53E-05    8.53E-05 
+VGS         -6.61E-01   -6.61E-01 
+VDS          1.40E+01    1.40E+01 
+GM           5.04E-04    5.04E-04 
+GDS          0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .13
+
